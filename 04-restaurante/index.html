@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_RESTAURANTE}} | {{TIPO_DE_COZINHA}} em {{CIDADE}}</title>
+  <meta name="description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:title" content="{{NOME_RESTAURANTE}}">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_RESTAURANTE}}</a>
+      <nav aria-label="Principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">A casa</a>
+        <a href="#visite">Onde estamos</a>
+      </nav>
+      <a class="btn btn--sm" data-whatsapp href="#">Pedir</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero__bg" src="img/hero.svg" alt="" width="1600" height="1000">
+      <div class="container hero__content">
+        <p class="status" id="status"><span class="dot"></span><span class="status__text">Verificando horário...</span></p>
+        <h1>{{FRASE_PRINCIPAL}}</h1>
+        <p class="hero__sub">{{SUBTITULO}}</p>
+        <div class="hero__actions">
+          <a class="btn" data-whatsapp href="#">Fazer pedido pelo WhatsApp</a>
+          <a class="btn btn--outline" href="#cardapio">Ver cardápio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="section container">
+      <h2>Os mais pedidos</h2>
+      <div class="highlights">
+        <article><img src="img/prato1.svg" alt="{{PRATO_DESTAQUE_1}}" width="800" height="800" loading="lazy"><h3>{{PRATO_DESTAQUE_1}}</h3><p>{{DESCRICAO_DESTAQUE_1}}</p><span class="price">{{PRECO_DESTAQUE_1}}</span></article>
+        <article><img src="img/prato2.svg" alt="{{PRATO_DESTAQUE_2}}" width="800" height="800" loading="lazy"><h3>{{PRATO_DESTAQUE_2}}</h3><p>{{DESCRICAO_DESTAQUE_2}}</p><span class="price">{{PRECO_DESTAQUE_2}}</span></article>
+        <article><img src="img/prato3.svg" alt="{{PRATO_DESTAQUE_3}}" width="800" height="800" loading="lazy"><h3>{{PRATO_DESTAQUE_3}}</h3><p>{{DESCRICAO_DESTAQUE_3}}</p><span class="price">{{PRECO_DESTAQUE_3}}</span></article>
+      </div>
+    </section>
+
+    <!-- CARDÁPIO COM ABAS -->
+    <section class="section menu" id="cardapio">
+      <div class="container">
+        <h2>Cardápio</h2>
+        <div class="tabs" role="tablist" aria-label="Categorias do cardápio">
+          <button role="tab" aria-selected="true" aria-controls="tab-entradas" id="btn-entradas">Entradas</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-pratos" id="btn-pratos" tabindex="-1">Pratos</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-sobremesas" id="btn-sobremesas" tabindex="-1">Sobremesas</button>
+          <button role="tab" aria-selected="false" aria-controls="tab-bebidas" id="btn-bebidas" tabindex="-1">Bebidas</button>
+        </div>
+
+        <!-- Para adicionar um item, copie um <li> dentro da aba desejada -->
+        <ul class="menu__list" role="tabpanel" id="tab-entradas" aria-labelledby="btn-entradas">
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+        </ul>
+        <ul class="menu__list" role="tabpanel" id="tab-pratos" aria-labelledby="btn-pratos" hidden>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+        </ul>
+        <ul class="menu__list" role="tabpanel" id="tab-sobremesas" aria-labelledby="btn-sobremesas" hidden>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+        </ul>
+        <ul class="menu__list" role="tabpanel" id="tab-bebidas" aria-labelledby="btn-bebidas" hidden>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+          <li><div><h3>{{ITEM}}</h3><p>{{DESCRICAO_ITEM}}</p></div><span>{{PRECO}}</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- A CASA -->
+    <section class="section container about" id="sobre">
+      <img src="img/ambiente.svg" alt="{{DESCRICAO_FOTO_AMBIENTE}}" width="1000" height="1200" loading="lazy">
+      <div>
+        <h2>{{TITULO_HISTORIA}}</h2>
+        <p>{{TEXTO_HISTORIA_1}}</p>
+        <p>{{TEXTO_HISTORIA_2}}</p>
+        <ul class="features">
+          <li>{{DIFERENCIAL_1}}</li>
+          <li>{{DIFERENCIAL_2}}</li>
+          <li>{{DIFERENCIAL_3}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HORÁRIOS E LOCALIZAÇÃO -->
+    <section class="section visit" id="visite">
+      <div class="container visit__grid">
+        <div>
+          <h2>Venha nos visitar</h2>
+          <p class="address">{{ENDERECO_COMPLETO}}</p>
+          <h3>Horário de funcionamento</h3>
+          <!-- A tabela é preenchida pelo script.js a partir do objeto HORARIOS -->
+          <table class="hours" id="hours"></table>
+          <div class="visit__actions">
+            <a class="btn" data-whatsapp href="#">Reservar mesa</a>
+            <a class="btn btn--outline-dark" href="{{LINK_GOOGLE_MAPS}}">Como chegar</a>
+          </div>
+        </div>
+        <!-- No Google Maps: Compartilhar > Incorporar um mapa > copie o src do iframe -->
+        <iframe class="map" src="{{SRC_IFRAME_GOOGLE_MAPS}}" title="Mapa com a localização do restaurante" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_RESTAURANTE}}</p>
+      <nav aria-label="Redes sociais"><a href="{{LINK_INSTAGRAM}}">Instagram</a><a href="{{LINK_IFOOD}}">iFood</a></nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

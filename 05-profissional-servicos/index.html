@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_PROFISSIONAL}} | {{PROFISSAO}} em {{CIDADE}}</title>
+  <meta name="description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:title" content="{{NOME_PROFISSIONAL}} | {{PROFISSAO}}">
+  <meta property="og:image" content="img/profissional.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Template para profissionais liberais: saúde, psicologia, advocacia, contabilidade, estética etc.
+       Atenção: alguns conselhos (CFM, CRP, OAB) restringem depoimentos e promessas de resultado.
+       Revise a seção de depoimentos conforme o código de ética da profissão. -->
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_PROFISSIONAL}}<small>{{PROFISSAO}}</small></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#atuacao">Áreas de atuação</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#agendar" class="btn btn--sm">Agendar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <p class="credential">{{REGISTRO_PROFISSIONAL}}</p>
+          <h1>{{TITULO_PRINCIPAL}}</h1>
+          <p class="hero__sub">{{SUBTITULO}}</p>
+          <div class="hero__actions">
+            <a href="#agendar" class="btn">Agendar atendimento</a>
+            <a href="#atuacao" class="link">Conhecer áreas de atuação</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>{{ANOS_EXPERIENCIA}}</strong> anos de experiência</li>
+            <li><strong>Presencial</strong> e online</li>
+          </ul>
+        </div>
+        <img src="img/profissional.svg" alt="Foto de {{NOME_PROFISSIONAL}}" width="900" height="1100" class="hero__photo">
+      </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="section" id="atuacao">
+      <div class="container">
+        <h2>Áreas de atuação</h2>
+        <p class="lead">{{TEXTO_AREAS}}</p>
+        <div class="areas">
+          <details open><summary>{{AREA_1}}</summary><p>{{DESCRICAO_AREA_1}}</p></details>
+          <details><summary>{{AREA_2}}</summary><p>{{DESCRICAO_AREA_2}}</p></details>
+          <details><summary>{{AREA_3}}</summary><p>{{DESCRICAO_AREA_3}}</p></details>
+          <details><summary>{{AREA_4}}</summary><p>{{DESCRICAO_AREA_4}}</p></details>
+          <details><summary>{{AREA_5}}</summary><p>{{DESCRICAO_AREA_5}}</p></details>
+          <details><summary>{{AREA_6}}</summary><p>{{DESCRICAO_AREA_6}}</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE + FORMAÇÃO -->
+    <section class="section section--soft" id="sobre">
+      <div class="container about">
+        <div>
+          <h2>Sobre {{NOME_CURTO}}</h2>
+          <p>{{TEXTO_SOBRE_1}}</p>
+          <p>{{TEXTO_SOBRE_2}}</p>
+        </div>
+        <div>
+          <h3>Formação</h3>
+          <ol class="timeline">
+            <li><span>{{ANO_1}}</span>{{FORMACAO_1}}</li>
+            <li><span>{{ANO_2}}</span>{{FORMACAO_2}}</li>
+            <li><span>{{ANO_3}}</span>{{FORMACAO_3}}</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO É O ATENDIMENTO -->
+    <section class="section" id="atendimento">
+      <div class="container">
+        <h2>Como é o atendimento</h2>
+        <div class="modes">
+          <article>
+            <h3>Presencial</h3>
+            <p>{{ENDERECO_CONSULTORIO}}</p>
+            <img src="img/consultorio.svg" alt="{{DESCRICAO_FOTO_CONSULTORIO}}" width="1200" height="800" loading="lazy">
+          </article>
+          <article>
+            <h3>Online</h3>
+            <p>{{TEXTO_ATENDIMENTO_ONLINE}}</p>
+            <h3 class="mt">Formas de pagamento</h3>
+            <p>{{FORMAS_PAGAMENTO}}</p>
+            <h3 class="mt">Convênios</h3>
+            <ul class="chips"><li>{{CONVENIO_1}}</li><li>{{CONVENIO_2}}</li><li>{{CONVENIO_3}}</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS (revise conforme o código de ética da profissão) -->
+    <section class="section section--soft">
+      <div class="container">
+        <h2>Relatos de quem foi atendido</h2>
+        <div class="quotes">
+          <blockquote><p>“{{DEPOIMENTO_1}}”</p><cite>{{INICIAIS_1}}</cite></blockquote>
+          <blockquote><p>“{{DEPOIMENTO_2}}”</p><cite>{{INICIAIS_2}}</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="section" id="agendar">
+      <div class="container booking">
+        <div>
+          <h2>Agende seu atendimento</h2>
+          <p>Escolha o tipo de atendimento e a data de preferência. A confirmação do horário é feita pelo WhatsApp.</p>
+          <p class="note">Em caso de emergência, procure o serviço de urgência mais próximo.</p>
+        </div>
+        <form id="booking-form" class="booking__form" novalidate>
+          <label>Nome completo<input name="nome" required autocomplete="name"></label>
+          <label>Serviço
+            <select name="servico" required>
+              <option value="">Selecione</option>
+              <option>{{AREA_1}}</option><option>{{AREA_2}}</option><option>{{AREA_3}}</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend>Modalidade</legend>
+            <label class="radio"><input type="radio" name="modalidade" value="Presencial" checked> Presencial</label>
+            <label class="radio"><input type="radio" name="modalidade" value="Online"> Online</label>
+          </fieldset>
+          <div class="row">
+            <label>Data<input type="date" name="data" required></label>
+            <label>Período
+              <select name="periodo"><option>Manhã</option><option>Tarde</option><option>Noite</option></select>
+            </label>
+          </div>
+          <button class="btn btn--full" type="submit">Solicitar pelo WhatsApp</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>{{NOME_PROFISSIONAL}} · {{REGISTRO_PROFISSIONAL}}</p>
+      <p>© <span id="ano"></span> · <a href="{{LINK_INSTAGRAM}}">Instagram</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

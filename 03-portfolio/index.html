@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{SEU_NOME}} | {{PROFISSAO}}</title>
+  <meta name="description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:title" content="{{SEU_NOME}} | {{PROFISSAO}}">
+  <meta property="og:image" content="img/projeto1.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{SEU_NOME}}</a>
+      <nav aria-label="Principal">
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section class="intro container">
+      <h1>{{FRASE_DE_APRESENTACAO}}</h1>
+      <p>{{SEU_NOME}} é {{PROFISSAO}} em {{CIDADE}}. {{FRASE_COMPLEMENTAR}}</p>
+    </section>
+
+    <!-- TRABALHOS COM FILTRO -->
+    <section class="work container" id="trabalhos">
+      <div class="filters" role="group" aria-label="Filtrar trabalhos">
+        <button class="is-active" data-filter="todos">Todos</button>
+        <button data-filter="categoria-a">{{CATEGORIA_A}}</button>
+        <button data-filter="categoria-b">{{CATEGORIA_B}}</button>
+        <button data-filter="categoria-c">{{CATEGORIA_C}}</button>
+      </div>
+
+      <!-- Para adicionar um projeto, copie um <figure> e ajuste data-category, imagem e textos -->
+      <div class="grid">
+        <figure class="item" data-category="categoria-a">
+          <button class="item__open"><img src="img/projeto1.svg" alt="{{PROJETO_1}}" width="1000" height="1250" loading="lazy"></button>
+          <figcaption><strong>{{PROJETO_1}}</strong><span>{{CATEGORIA_A}}</span></figcaption>
+        </figure>
+        <figure class="item" data-category="categoria-b">
+          <button class="item__open"><img src="img/projeto2.svg" alt="{{PROJETO_2}}" width="1000" height="800" loading="lazy"></button>
+          <figcaption><strong>{{PROJETO_2}}</strong><span>{{CATEGORIA_B}}</span></figcaption>
+        </figure>
+        <figure class="item" data-category="categoria-c">
+          <button class="item__open"><img src="img/projeto3.svg" alt="{{PROJETO_3}}" width="1000" height="1250" loading="lazy"></button>
+          <figcaption><strong>{{PROJETO_3}}</strong><span>{{CATEGORIA_C}}</span></figcaption>
+        </figure>
+        <figure class="item" data-category="categoria-a">
+          <button class="item__open"><img src="img/projeto4.svg" alt="{{PROJETO_4}}" width="1000" height="800" loading="lazy"></button>
+          <figcaption><strong>{{PROJETO_4}}</strong><span>{{CATEGORIA_A}}</span></figcaption>
+        </figure>
+        <figure class="item" data-category="categoria-b">
+          <button class="item__open"><img src="img/projeto5.svg" alt="{{PROJETO_5}}" width="1000" height="1250" loading="lazy"></button>
+          <figcaption><strong>{{PROJETO_5}}</strong><span>{{CATEGORIA_B}}</span></figcaption>
+        </figure>
+        <figure class="item" data-category="categoria-c">
+          <button class="item__open"><img src="img/projeto6.svg" alt="{{PROJETO_6}}" width="1000" height="800" loading="lazy"></button>
+          <figcaption><strong>{{PROJETO_6}}</strong><span>{{CATEGORIA_C}}</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about container" id="sobre">
+      <img src="img/perfil.svg" alt="Foto de {{SEU_NOME}}" width="800" height="1000" loading="lazy">
+      <div>
+        <h2>Sobre</h2>
+        <p>{{TEXTO_SOBRE_1}}</p>
+        <p>{{TEXTO_SOBRE_2}}</p>
+        <h3>Serviços</h3>
+        <ul class="tags">
+          <li>{{SERVICO_1}}</li><li>{{SERVICO_2}}</li><li>{{SERVICO_3}}</li><li>{{SERVICO_4}}</li>
+        </ul>
+        <h3>Já trabalhei com</h3>
+        <p class="clients">{{CLIENTES_SEPARADOS_POR_VIRGULA}}</p>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <div class="container">
+        <p>Tem um projeto em mente?</p>
+        <a class="contact__mail" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+        <button class="copy" data-copy="{{EMAIL}}">Copiar e-mail</button>
+        <div class="socials">
+          <a href="{{LINK_INSTAGRAM}}">Instagram</a>
+          <a href="{{LINK_BEHANCE}}">Behance</a>
+          <a href="https://wa.me/{{WHATSAPP_NUMERO}}">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="ano"></span> {{SEU_NOME}}</p>
+    <a href="#">Voltar ao topo</a>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <dialog class="lightbox" aria-label="Visualizar projeto">
+    <button class="lightbox__close" aria-label="Fechar">×</button>
+    <button class="lightbox__nav lightbox__prev" aria-label="Anterior">‹</button>
+    <img alt="">
+    <button class="lightbox__nav lightbox__next" aria-label="Próximo">›</button>
+    <p class="lightbox__caption"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

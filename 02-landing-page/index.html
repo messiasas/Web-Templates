@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITULO_PAGINA}}</title>
+  <meta name="description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:title" content="{{TITULO_PAGINA}}">
+  <meta property="og:description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:image" content="img/produto.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Cole aqui o Pixel da Meta / tag do Google Ads, se houver tráfego pago -->
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <span class="logo">{{NOME_EMPRESA}}</span>
+      <a href="#oferta" class="btn btn--small">{{TEXTO_BOTAO}}</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO + FORMULÁRIO DE LEAD -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="badge">{{SELO_DESTAQUE}}</p>
+          <h1>{{HEADLINE}}</h1>
+          <p class="hero__sub">{{SUBHEADLINE}}</p>
+          <ul class="bullets">
+            <li>{{BENEFICIO_CURTO_1}}</li>
+            <li>{{BENEFICIO_CURTO_2}}</li>
+            <li>{{BENEFICIO_CURTO_3}}</li>
+          </ul>
+        </div>
+
+        <form class="lead-card" id="lead-form" novalidate>
+          <h2>{{TITULO_FORMULARIO}}</h2>
+          <p>Preencha e fale direto com a nossa equipe pelo WhatsApp.</p>
+          <label>Nome<input name="nome" required autocomplete="name"></label>
+          <label>WhatsApp<input name="telefone" type="tel" required inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel"></label>
+          <label>Cidade<input name="cidade" autocomplete="address-level2"></label>
+          <button class="btn btn--full" type="submit">{{TEXTO_BOTAO}}</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+          <small>Seus dados são usados apenas para este atendimento.</small>
+        </form>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL RÁPIDA -->
+    <section class="proof" aria-label="Resultados">
+      <div class="container proof__grid">
+        <p><strong>{{NUMERO_1}}</strong>{{LEGENDA_NUMERO_1}}</p>
+        <p><strong>{{NUMERO_2}}</strong>{{LEGENDA_NUMERO_2}}</p>
+        <p><strong>{{NUMERO_3}}</strong>{{LEGENDA_NUMERO_3}}</p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA → SOLUÇÃO -->
+    <section class="section">
+      <div class="container split">
+        <img src="img/produto.svg" alt="{{DESCRICAO_IMAGEM_PRODUTO}}" width="900" height="900" loading="lazy">
+        <div>
+          <h2>{{TITULO_PROBLEMA}}</h2>
+          <p>{{TEXTO_PROBLEMA}}</p>
+          <p class="highlight">{{TEXTO_SOLUCAO}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="section section--tint">
+      <div class="container">
+        <h2 class="center">O que você ganha</h2>
+        <div class="benefits">
+          <article><span class="icon" aria-hidden="true">⚡</span><h3>{{BENEFICIO_1}}</h3><p>{{DESCRICAO_BENEFICIO_1}}</p></article>
+          <article><span class="icon" aria-hidden="true">🎯</span><h3>{{BENEFICIO_2}}</h3><p>{{DESCRICAO_BENEFICIO_2}}</p></article>
+          <article><span class="icon" aria-hidden="true">🛡️</span><h3>{{BENEFICIO_3}}</h3><p>{{DESCRICAO_BENEFICIO_3}}</p></article>
+          <article><span class="icon" aria-hidden="true">💬</span><h3>{{BENEFICIO_4}}</h3><p>{{DESCRICAO_BENEFICIO_4}}</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section">
+      <div class="container">
+        <h2 class="center">Como funciona</h2>
+        <ol class="steps">
+          <li><h3>{{PASSO_1}}</h3><p>{{DESCRICAO_PASSO_1}}</p></li>
+          <li><h3>{{PASSO_2}}</h3><p>{{DESCRICAO_PASSO_2}}</p></li>
+          <li><h3>{{PASSO_3}}</h3><p>{{DESCRICAO_PASSO_3}}</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section section--tint">
+      <div class="container">
+        <h2 class="center">Quem já contratou</h2>
+        <div class="reviews">
+          <figure><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“{{DEPOIMENTO_1}}”</blockquote><figcaption>{{CLIENTE_1}}</figcaption></figure>
+          <figure><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“{{DEPOIMENTO_2}}”</blockquote><figcaption>{{CLIENTE_2}}</figcaption></figure>
+          <figure><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“{{DEPOIMENTO_3}}”</blockquote><figcaption>{{CLIENTE_3}}</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="section offer" id="oferta">
+      <div class="container offer__card">
+        <p class="offer__tag">{{NOME_OFERTA}}</p>
+        <p class="offer__price"><s>{{PRECO_ANTIGO}}</s> <strong>{{PRECO_ATUAL}}</strong></p>
+        <p>{{CONDICAO_PAGAMENTO}}</p>
+        <div class="countdown" aria-live="off">
+          <p>A condição especial termina em</p>
+          <div class="countdown__grid">
+            <span><b id="cd-dias">00</b>dias</span>
+            <span><b id="cd-horas">00</b>horas</span>
+            <span><b id="cd-min">00</b>min</span>
+            <span><b id="cd-seg">00</b>seg</span>
+          </div>
+        </div>
+        <a href="#inicio" class="btn btn--big">{{TEXTO_BOTAO}}</a>
+        <p class="guarantee">🔒 {{TEXTO_GARANTIA}}</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container faq">
+        <h2 class="center">Perguntas frequentes</h2>
+        <details><summary>{{PERGUNTA_1}}</summary><p>{{RESPOSTA_1}}</p></details>
+        <details><summary>{{PERGUNTA_2}}</summary><p>{{RESPOSTA_2}}</p></details>
+        <details><summary>{{PERGUNTA_3}}</summary><p>{{RESPOSTA_3}}</p></details>
+        <details><summary>{{PERGUNTA_4}}</summary><p>{{RESPOSTA_4}}</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}} · CNPJ {{CNPJ}}</p>
+    </div>
+  </footer>
+
+  <!-- Barra fixa no celular -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#inicio" class="btn btn--full">{{TEXTO_BOTAO}}</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

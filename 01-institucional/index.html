@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_EMPRESA}} | {{SLOGAN_CURTO}}</title>
+  <meta name="description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:title" content="{{NOME_EMPRESA}}">
+  <meta property="og:description" content="{{DESCRICAO_SEO}}">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">{{NOME_EMPRESA}}</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="nav" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Clientes</a>
+        <a href="#contato" class="btn btn--primary btn--sm">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1>{{TITULO_PRINCIPAL}}</h1>
+          <p>{{SUBTITULO}}</p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--primary">Solicitar orçamento</a>
+            <a href="#servicos" class="btn btn--ghost">Conhecer serviços</a>
+          </div>
+        </div>
+        <img class="hero__img" src="img/hero.svg" alt="{{DESCRICAO_IMAGEM_HERO}}" width="1200" height="900">
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="stats" aria-label="Números da empresa">
+      <div class="container stats__grid">
+        <div><strong data-count="10">0</strong><span>anos de mercado</span></div>
+        <div><strong data-count="250">0</strong><span>clientes atendidos</span></div>
+        <div><strong data-count="98">0</strong><span>% de satisfação</span></div>
+        <div><strong data-count="24">0</strong><span>horas para responder</span></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <img src="img/sobre.svg" alt="{{DESCRICAO_IMAGEM_SOBRE}}" width="900" height="1000" loading="lazy">
+        <div>
+          <h2>Sobre a {{NOME_EMPRESA}}</h2>
+          <p>{{TEXTO_SOBRE_1}}</p>
+          <p>{{TEXTO_SOBRE_2}}</p>
+          <ul class="checklist">
+            <li>{{DIFERENCIAL_1}}</li>
+            <li>{{DIFERENCIAL_2}}</li>
+            <li>{{DIFERENCIAL_3}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <h2>Nossos serviços</h2>
+        <p class="section__lead">{{TEXTO_SERVICOS}}</p>
+        <div class="services">
+          <article class="service">
+            <h3>{{SERVICO_1}}</h3>
+            <p>{{DESCRICAO_SERVICO_1}}</p>
+          </article>
+          <article class="service">
+            <h3>{{SERVICO_2}}</h3>
+            <p>{{DESCRICAO_SERVICO_2}}</p>
+          </article>
+          <article class="service">
+            <h3>{{SERVICO_3}}</h3>
+            <p>{{DESCRICAO_SERVICO_3}}</p>
+          </article>
+          <article class="service">
+            <h3>{{SERVICO_4}}</h3>
+            <p>{{DESCRICAO_SERVICO_4}}</p>
+          </article>
+          <article class="service">
+            <h3>{{SERVICO_5}}</h3>
+            <p>{{DESCRICAO_SERVICO_5}}</p>
+          </article>
+          <article class="service">
+            <h3>{{SERVICO_6}}</h3>
+            <p>{{DESCRICAO_SERVICO_6}}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="testimonials">
+          <figure>
+            <blockquote>“{{DEPOIMENTO_1}}”</blockquote>
+            <figcaption><strong>{{CLIENTE_1}}</strong>{{EMPRESA_CLIENTE_1}}</figcaption>
+          </figure>
+          <figure>
+            <blockquote>“{{DEPOIMENTO_2}}”</blockquote>
+            <figcaption><strong>{{CLIENTE_2}}</strong>{{EMPRESA_CLIENTE_2}}</figcaption>
+          </figure>
+          <figure>
+            <blockquote>“{{DEPOIMENTO_3}}”</blockquote>
+            <figcaption><strong>{{CLIENTE_3}}</strong>{{EMPRESA_CLIENTE_3}}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--dark" id="contato">
+      <div class="container contact">
+        <div>
+          <h2>Vamos conversar?</h2>
+          <p>Conte o que você precisa e retornamos em até 1 dia útil.</p>
+          <ul class="contact__list">
+            <li><span>Telefone / WhatsApp</span><a href="https://wa.me/{{WHATSAPP_NUMERO}}">{{WHATSAPP_EXIBICAO}}</a></li>
+            <li><span>E-mail</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li><span>Endereço</span>{{ENDERECO}}</li>
+          </ul>
+        </div>
+        <!-- Troque SEU_ID pelo ID do formulário criado em formspree.io -->
+        <form class="form" action="https://formspree.io/f/SEU_ID" method="POST" novalidate>
+          <label>Nome<input name="nome" required autocomplete="name"></label>
+          <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+          <label>Telefone<input type="tel" name="telefone" autocomplete="tel"></label>
+          <label>Mensagem<textarea name="mensagem" rows="4" required></textarea></label>
+          <button class="btn btn--primary" type="submit">Enviar mensagem</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}}. CNPJ {{CNPJ}}</p>
+      <nav aria-label="Redes sociais">
+        <a href="{{LINK_INSTAGRAM}}">Instagram</a>
+        <a href="{{LINK_LINKEDIN}}">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/{{WHATSAPP_NUMERO}}" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
