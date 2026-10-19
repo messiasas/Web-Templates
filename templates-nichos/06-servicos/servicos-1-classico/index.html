@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_EMPRESA}} | Prestação de serviços em {{CIDADE}}</title>
+  <meta name="description" content="Instalação, manutenção e atendimento emergencial em {{CIDADE}}. Orçamento rápido pelo WhatsApp.">
+  <meta property="og:title" content="{{NOME_EMPRESA}}">
+  <meta property="og:description" content="Instalação, manutenção e atendimento emergencial em {{CIDADE}}. Orçamento rápido pelo WhatsApp.">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_EMPRESA}}</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#especial">Simulador</a>
+        <a href="#contato" class="btn btn--primary btn--sm">Pedir orçamento</a>
+      </nav>
+    </div>
+  </header>
+<main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          
+          <p class="kicker">Instalação e manutenção em {{CIDADE}}</p>
+          <h1>Serviço bem feito, no horário marcado</h1>
+          <p class="hero__sub">Instalação, manutenção e reparos para residências e empresas, com profissionais qualificados e garantia.</p>
+          <div class="actions">
+            <a href="#contato" class="btn btn--primary">Pedir orçamento</a>
+            <a href="#especial" class="btn btn--ghost">Simular valor</a>
+          </div>
+        </div>
+        <img class="hero__img" src="img/hero.svg" alt="{{DESCRICAO_IMAGEM_PRINCIPAL}}" width="1200" height="900">
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Números"><div class="container stats__grid"><div><strong>3.500</strong><span>atendimentos realizados</span></div><div><strong>4,9</strong><span>nota dos clientes</span></div><div><strong>2</strong><span>h para atendimento emergencial</span></div><div><strong>6</strong><span>meses de garantia</span></div></div></section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <h2>Serviços</h2>
+        <p class="lead">Atendemos residências, condomínios e empresas.</p>
+        <div class="cards"><article class="card"><span class="card__icon" aria-hidden="true">🛠️</span><h3>Instalação</h3><p>Instalação de equipamentos com acabamento caprichado.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🔍</span><h3>Manutenção preventiva</h3><p>Visitas programadas para evitar quebras e gastos maiores.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🧰</span><h3>Manutenção corretiva</h3><p>Diagnóstico e reparo com orçamento antes do serviço.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🚨</span><h3>Atendimento emergencial</h3><p>Equipe de plantão para urgências.</p></article><article class="card"><span class="card__icon" aria-hidden="true">📅</span><h3>Contratos mensais</h3><p>Planos para condomínios e empresas com prioridade no atendimento.</p></article><article class="card"><span class="card__icon" aria-hidden="true">📋</span><h3>Laudos e vistorias</h3><p>Inspeção técnica com relatório e fotos.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <img src="img/sobre.svg" alt="{{DESCRICAO_IMAGEM_SOBRE}}" width="900" height="1000" loading="lazy">
+        <div>
+          <h2>Profissionais que você pode receber em casa</h2>
+          <p>Nossa equipe é uniformizada, identificada e treinada para trabalhar com limpeza e organização.</p>
+          <p>Combinamos o horário, chegamos no prazo e deixamos o ambiente como encontramos.</p>
+          <ul class="checklist"><li>Orçamento sem compromisso</li><li>Garantia de 6 meses</li><li>Equipe identificada</li><li>Pagamento em até 6x</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section special" id="especial">
+  <div class="container special__grid">
+    <div>
+      <h2>Simule o valor</h2>
+      <p class="lead">Marque os serviços para ver uma estimativa. O valor final é confirmado na visita técnica.</p>
+      <h3>Área de atendimento</h3>
+      <ul class="chips"><li>Centro</li><li>Zona Norte</li><li>Zona Sul</li><li>Zona Leste</li><li>Zona Oeste</li><li>Região metropolitana</li></ul>
+    </div>
+    <div class="panel calc">
+      <ul class="calc__list"><li><label><input type="checkbox" value="150" data-nome="Instalação simples"> <span>Instalação simples</span><b>a partir de R$ 150</b></label></li><li><label><input type="checkbox" value="350" data-nome="Instalação completa"> <span>Instalação completa</span><b>a partir de R$ 350</b></label></li><li><label><input type="checkbox" value="180" data-nome="Manutenção preventiva"> <span>Manutenção preventiva</span><b>a partir de R$ 180</b></label></li><li><label><input type="checkbox" value="220" data-nome="Reparo / manutenção corretiva"> <span>Reparo / manutenção corretiva</span><b>a partir de R$ 220</b></label></li><li><label><input type="checkbox" value="290" data-nome="Atendimento emergencial"> <span>Atendimento emergencial</span><b>a partir de R$ 290</b></label></li><li><label><input type="checkbox" value="250" data-nome="Laudo técnico"> <span>Laudo técnico</span><b>a partir de R$ 250</b></label></li></ul>
+      <p class="calc__total">Estimativa: <strong id="total">R$ 0</strong></p>
+      <button class="btn btn--primary" id="enviar-estimativa" type="button" disabled>Enviar estimativa pelo WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Como funciona</h2>
+        <ol class="steps"><li><h3>Contato</h3><p>Conte o que precisa pelo WhatsApp ou formulário.</p></li><li><h3>Visita técnica</h3><p>Avaliamos e passamos o orçamento.</p></li><li><h3>Execução</h3><p>Serviço no dia e horário combinados.</p></li><li><h3>Garantia</h3><p>Suporte após a entrega do serviço.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="quotes"><figure><blockquote>“Chegaram no horário e deixaram tudo limpo. Serviço impecável.”</blockquote><figcaption>Cláudia M.</figcaption></figure><figure><blockquote>“Fazemos a manutenção do condomínio com eles há 2 anos.”</blockquote><figcaption>Síndico, Residencial Jardins</figcaption></figure><figure><blockquote>“Atenderam uma emergência num domingo à noite.”</blockquote><figcaption>Paulo V.</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq">
+        <h2>Perguntas frequentes</h2>
+        <details><summary>Atendem quais bairros?</summary><p>{{BAIRROS_ATENDIDOS}}. Consulte outras regiões.</p></details><details><summary>A visita técnica é cobrada?</summary><p>A visita para orçamento é gratuita na área de atendimento.</p></details><details><summary>Quais formas de pagamento?</summary><p>Pix, dinheiro e cartão em até 6x.</p></details><details><summary>O serviço tem garantia?</summary><p>Sim, 6 meses para a mão de obra.</p></details>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contato">
+      <div class="container contact">
+        <div>
+          <h2>Peça seu orçamento</h2>
+          <p>Descreva o serviço e retornamos rapidamente pelo WhatsApp.</p>
+          <ul class="info">
+          <li><span>WhatsApp</span><a href="#" data-wa>{{WHATSAPP_EXIBICAO}}</a></li>
+          <li><span>E-mail</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li><span>Endereço</span>{{ENDERECO}}</li>
+        </ul>
+        
+        </div>
+        <form class="form form--card" data-wa-form data-mensagem="Olá! Gostaria de um orçamento." novalidate>
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" type="text" name="nome" data-label="Nome" required></div>
+          <div class="field"><label for="f-bairro">Bairro</label><input id="f-bairro" type="text" name="bairro" data-label="Bairro" required></div>
+          <div class="field"><label for="f-servico">Serviço</label><select id="f-servico" name="servico" data-label="Serviço" required><option value="">Selecione</option><option>Instalação</option><option>Manutenção preventiva</option><option>Manutenção corretiva</option><option>Emergência</option><option>Contrato mensal</option><option>Laudo / vistoria</option></select></div>
+          <div class="field"><label for="f-urgencia">Urgência</label><select id="f-urgencia" name="urgencia" data-label="Urgência"><option value="">Selecione</option><option>Esta semana</option><option>Hoje</option><option>Sem pressa</option></select></div>
+          <div class="field field--full"><label for="f-descricao">Descreva o serviço</label><textarea id="f-descricao" name="descricao" rows="3" data-label="Descreva o serviço"></textarea></div>
+          <button class="btn btn--primary field--full" type="submit">Enviar pelo WhatsApp</button>
+          <p class="form__status field--full" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}} · CNPJ {{CNPJ}}</p>
+      <nav aria-label="Redes sociais"><a href="{{LINK_INSTAGRAM}}">Instagram</a><a href="{{LINK_FACEBOOK}}">Facebook</a></nav>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

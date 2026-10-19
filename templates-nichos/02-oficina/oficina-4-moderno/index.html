@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_EMPRESA}} | Oficina mecânica em {{CIDADE}}</title>
+  <meta name="description" content="Oficina mecânica em {{CIDADE}}: revisão, freios, suspensão, injeção eletrônica e ar-condicionado com orçamento pelo WhatsApp.">
+  <meta property="og:title" content="{{NOME_EMPRESA}}">
+  <meta property="og:description" content="Oficina mecânica em {{CIDADE}}: revisão, freios, suspensão, injeção eletrônica e ar-condicionado com orçamento pelo WhatsApp.">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_EMPRESA}}</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#especial">Revisão</a>
+        <a href="#contato" class="btn btn--primary btn--sm">Pedir orçamento</a>
+      </nav>
+    </div>
+  </header>
+<main>
+    <section class="hero container">
+      <div class="hero__bento">
+        <div class="box box--main">
+          
+          <p class="kicker">Mecânica automotiva em {{CIDADE}}</p>
+          <h1>Seu carro revisado, com orçamento claro antes de qualquer serviço</h1>
+          <p class="hero__sub">Diagnóstico com equipamento moderno, peças de qualidade e garantia em todos os serviços.</p>
+          <div class="actions">
+            <a href="#contato" class="btn btn--primary">Pedir orçamento</a>
+            <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+          </div>
+        </div>
+        <div class="box box--img"><img src="img/hero.svg" alt="{{DESCRICAO_IMAGEM_PRINCIPAL}}" width="1200" height="900"></div>
+        <div class="box box--stat"><strong>12</strong><span>anos de experiência</span></div>
+        <div class="box box--stat box--accent"><strong>90</strong><span>dias de garantia</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <h2>Serviços</h2>
+        <p class="lead">Manutenção preventiva e corretiva para carros nacionais e importados.</p>
+        <div class="bento"><article class="tile tile--wide"><span class="tile__icon" aria-hidden="true">🔧</span><h3>Revisão completa</h3><p>Checagem de itens de segurança, fluidos, filtros e correias conforme o manual.</p></article><article class="tile"><span class="tile__icon" aria-hidden="true">🛑</span><h3>Freios e suspensão</h3><p>Pastilhas, discos, amortecedores e alinhamento para rodar com segurança.</p></article><article class="tile"><span class="tile__icon" aria-hidden="true">💻</span><h3>Injeção eletrônica</h3><p>Scanner e diagnóstico de falhas, limpeza de bicos e sensores.</p></article><article class="tile"><span class="tile__icon" aria-hidden="true">❄️</span><h3>Ar-condicionado</h3><p>Higienização, recarga de gás e reparo do sistema.</p></article><article class="tile"><span class="tile__icon" aria-hidden="true">🛢️</span><h3>Troca de óleo</h3><p>Óleo e filtros conforme a especificação do fabricante.</p></article><article class="tile tile--wide"><span class="tile__icon" aria-hidden="true">⚡</span><h3>Elétrica automotiva</h3><p>Bateria, alternador, motor de partida e iluminação.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div>
+          <h2>Transparência do diagnóstico à entrega</h2>
+          <p>Antes de mexer no carro, explicamos o problema, mostramos as peças e passamos o orçamento por escrito.</p>
+          <p>Nada é feito sem a sua aprovação, e você acompanha o serviço por fotos no WhatsApp.</p>
+        </div>
+        <ul class="difs"><li>Orçamento sem compromisso</li><li>Garantia de 90 dias</li><li>Fotos do serviço pelo WhatsApp</li><li>Peças com nota fiscal</li></ul>
+      </div>
+    </section>
+
+    <section class="section special" id="especial">
+  <div class="container special__grid">
+    <div>
+      <h2>Quando fazer a próxima revisão?</h2>
+      <p class="lead">Informe a quilometragem e a data da última revisão. O cálculo usa o intervalo de 10.000 km ou 12 meses, o que vencer primeiro. Confira sempre o manual do seu carro.</p>
+      <h3>Marcas atendidas</h3>
+      <ul class="chips"><li>Chevrolet</li><li>Fiat</li><li>Volkswagen</li><li>Ford</li><li>Toyota</li><li>Honda</li><li>Hyundai</li><li>Renault</li><li>Jeep</li><li>Nissan</li></ul>
+    </div>
+    <form class="panel calc" id="revisao" novalidate>
+      <div class="field"><label for="km-atual">Quilometragem atual</label><input id="km-atual" type="number" inputmode="numeric" min="0" placeholder="Ex.: 48500" required></div>
+      <div class="field"><label for="km-ultima">Km na última revisão</label><input id="km-ultima" type="number" inputmode="numeric" min="0" placeholder="Ex.: 40000" required></div>
+      <div class="field"><label for="data-ultima">Data da última revisão</label><input id="data-ultima" type="date" required></div>
+      <button class="btn btn--primary" type="submit">Calcular</button>
+      <p class="calc__result" id="revisao-resultado" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Como funciona</h2>
+        <ol class="steps"><li><h3>Agende</h3><p>Escolha o dia e traga o carro.</p></li><li><h3>Diagnóstico</h3><p>Avaliamos e enviamos o orçamento.</p></li><li><h3>Aprovação</h3><p>Você aprova antes de começarmos.</p></li><li><h3>Entrega</h3><p>Carro pronto, testado e com garantia.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Quem já é cliente</h2>
+        <div class="scroller" tabindex="0" aria-label="Depoimentos, role para o lado"><figure><blockquote>“Explicaram tudo com fotos e o preço foi o combinado. Recomendo.”</blockquote><figcaption>Rafael M.</figcaption></figure><figure><blockquote>“Resolveram um barulho na suspensão que outras oficinas não acharam.”</blockquote><figcaption>Patrícia L.</figcaption></figure><figure><blockquote>“Atendimento rápido e honesto. Virei cliente.”</blockquote><figcaption>André F.</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq">
+        <h2>Perguntas frequentes</h2>
+        <details><summary>Preciso agendar?</summary><p>Recomendamos agendar para garantir o atendimento no mesmo dia, mas recebemos carros sem horário.</p></details><details><summary>O orçamento é cobrado?</summary><p>A avaliação visual é gratuita. Diagnósticos com scanner podem ter custo, informado antes.</p></details><details><summary>Vocês atendem carros importados?</summary><p>Sim, atendemos as principais marcas nacionais e importadas.</p></details><details><summary>Qual a garantia?</summary><p>90 dias para mão de obra e a garantia do fabricante para as peças.</p></details>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div>
+          <h2>Peça um orçamento</h2>
+          <p class="lead">Conte o que está acontecendo com o carro e retornamos pelo WhatsApp.</p>
+          <ul class="info">
+          <li><span>WhatsApp</span><a href="#" data-wa>{{WHATSAPP_EXIBICAO}}</a></li>
+          <li><span>E-mail</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li><span>Endereço</span>{{ENDERECO}}</li>
+        </ul>
+        
+        </div>
+        <form class="form form--card" data-wa-form data-mensagem="Olá! Gostaria de um orçamento para o meu carro." novalidate>
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" type="text" name="nome" data-label="Nome" required></div>
+          <div class="field"><label for="f-modelo">Modelo do carro</label><input id="f-modelo" type="text" name="modelo" data-label="Modelo do carro" required></div>
+          <div class="field"><label for="f-ano">Ano</label><input id="f-ano" type="text" name="ano" data-label="Ano"></div>
+          <div class="field"><label for="f-servico">Serviço</label><select id="f-servico" name="servico" data-label="Serviço" required><option value="">Selecione</option><option>Revisão</option><option>Freios / suspensão</option><option>Injeção eletrônica</option><option>Ar-condicionado</option><option>Troca de óleo</option><option>Elétrica</option><option>Outro</option></select></div>
+          <div class="field field--full"><label for="f-descricao">O que está acontecendo?</label><textarea id="f-descricao" name="descricao" rows="3" data-label="O que está acontecendo?"></textarea></div>
+          <button class="btn btn--primary field--full" type="submit">Enviar pelo WhatsApp</button>
+          <p class="form__status field--full" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}} · CNPJ {{CNPJ}}</p>
+      <nav aria-label="Redes sociais"><a href="{{LINK_INSTAGRAM}}">Instagram</a><a href="{{LINK_FACEBOOK}}">Facebook</a></nav>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

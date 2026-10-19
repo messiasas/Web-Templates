@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_EMPRESA}} | Restaurante em {{CIDADE}}</title>
+  <meta name="description" content="Restaurante em {{CIDADE}} com cardápio caseiro, delivery e reservas pelo WhatsApp.">
+  <meta property="og:title" content="{{NOME_EMPRESA}}">
+  <meta property="og:description" content="Restaurante em {{CIDADE}} com cardápio caseiro, delivery e reservas pelo WhatsApp.">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_EMPRESA}}</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#servicos">Os mais pedidos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#especial">Cardápio</a>
+        <a href="#contato" class="btn btn--primary btn--sm">Fazer pedido</a>
+      </nav>
+    </div>
+  </header>
+<main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="status" id="status"><span class="dot"></span><span>Verificando horário</span></p>
+          <p class="kicker">Cozinha de verdade desde {{ANO_FUNDACAO}}</p>
+          <h1>Comida feita na hora, do jeito que você gosta</h1>
+          <p class="hero__sub">Pratos preparados com ingredientes frescos, ambiente acolhedor e delivery rápido para toda a região.</p>
+          <div class="actions">
+            <a href="#contato" class="btn btn--primary">Fazer pedido</a>
+            <a href="#especial" class="btn btn--ghost">Ver cardápio</a>
+          </div>
+        </div>
+        <img class="hero__img" src="img/hero.svg" alt="{{DESCRICAO_IMAGEM_PRINCIPAL}}" width="1200" height="900">
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Números"><div class="container stats__grid"><div><strong>15</strong><span>anos servindo a cidade</span></div><div><strong>40</strong><span>pratos no cardápio</span></div><div><strong>4,8</strong><span>nota no Google</span></div><div><strong>30</strong><span>min de entrega média</span></div></div></section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <h2>Os mais pedidos</h2>
+        <p class="lead">Os pratos que fazem os clientes voltarem.</p>
+        <div class="cards"><article class="card"><span class="card__icon" aria-hidden="true">🍝</span><h3>Massa da casa</h3><p>Massa fresca com molho de tomate assado e manjericão. R$ 42</p></article><article class="card"><span class="card__icon" aria-hidden="true">🥩</span><h3>Picanha na chapa</h3><p>Acompanha arroz, farofa da casa e vinagrete. R$ 69</p></article><article class="card"><span class="card__icon" aria-hidden="true">🐟</span><h3>Peixe grelhado</h3><p>Filé do dia com legumes e purê de mandioquinha. R$ 58</p></article><article class="card"><span class="card__icon" aria-hidden="true">🥗</span><h3>Salada da estação</h3><p>Folhas, frutas da estação, castanhas e molho de mel. R$ 32</p></article><article class="card"><span class="card__icon" aria-hidden="true">🍰</span><h3>Torta da vovó</h3><p>Sobremesa da casa, servida com sorvete de creme. R$ 22</p></article><article class="card"><span class="card__icon" aria-hidden="true">🍹</span><h3>Sucos naturais</h3><p>Frutas da estação batidas na hora. R$ 12</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <img src="img/sobre.svg" alt="{{DESCRICAO_IMAGEM_SOBRE}}" width="900" height="1000" loading="lazy">
+        <div>
+          <h2>Uma casa para reunir quem você gosta</h2>
+          <p>Começamos como um pequeno negócio de família e crescemos sem perder o tempero de casa.</p>
+          <p>Hoje recebemos famílias, amigos e equipes de trabalho para almoço, jantar e eventos.</p>
+          <ul class="checklist"><li>Ingredientes frescos todos os dias</li><li>Espaço para crianças e eventos</li><li>Delivery próprio</li><li>Opções vegetarianas</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section special" id="especial">
+  <div class="container">
+    <h2>Cardápio</h2>
+    <p class="lead">Preços de exemplo. Atualize os itens no index.html.</p>
+    <div class="tabs" role="tablist" aria-label="Categorias do cardápio"><button role="tab" id="tab-0" aria-controls="painel-0" aria-selected="true" tabindex="0">Entradas</button><button role="tab" id="tab-1" aria-controls="painel-1" aria-selected="false" tabindex="-1">Pratos</button><button role="tab" id="tab-2" aria-controls="painel-2" aria-selected="false" tabindex="-1">Sobremesas</button><button role="tab" id="tab-3" aria-controls="painel-3" aria-selected="false" tabindex="-1">Bebidas</button></div>
+    <ul class="menu-list" role="tabpanel" id="painel-0" aria-labelledby="tab-0"><li><div><h3>Bolinho de bacalhau</h3><p>6 unidades com maionese de ervas</p></div><span class="price">R$ 34</span></li><li><div><h3>Bruschetta</h3><p>Tomate, manjericão e azeite</p></div><span class="price">R$ 26</span></li><li><div><h3>Caldo do dia</h3><p>Pergunte ao garçom</p></div><span class="price">R$ 22</span></li></ul>
+<ul class="menu-list" role="tabpanel" id="painel-1" aria-labelledby="tab-1" hidden><li><div><h3>Massa da casa</h3><p>Molho de tomate assado e manjericão</p></div><span class="price">R$ 42</span></li><li><div><h3>Picanha na chapa</h3><p>Arroz, farofa e vinagrete</p></div><span class="price">R$ 69</span></li><li><div><h3>Peixe grelhado</h3><p>Legumes e purê de mandioquinha</p></div><span class="price">R$ 58</span></li><li><div><h3>Risoto de cogumelos</h3><p>Opção vegetariana</p></div><span class="price">R$ 52</span></li></ul>
+<ul class="menu-list" role="tabpanel" id="painel-2" aria-labelledby="tab-2" hidden><li><div><h3>Torta da vovó</h3><p>Com sorvete de creme</p></div><span class="price">R$ 22</span></li><li><div><h3>Pudim de leite</h3><p>Receita da família</p></div><span class="price">R$ 16</span></li></ul>
+<ul class="menu-list" role="tabpanel" id="painel-3" aria-labelledby="tab-3" hidden><li><div><h3>Sucos naturais</h3><p>Frutas da estação</p></div><span class="price">R$ 12</span></li><li><div><h3>Refrigerantes</h3><p>Lata 350 ml</p></div><span class="price">R$ 7</span></li><li><div><h3>Água</h3><p>Com ou sem gás</p></div><span class="price">R$ 5</span></li></ul>
+
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Pedir é simples</h2>
+        <ol class="steps"><li><h3>Escolha no cardápio</h3><p>Veja os pratos e monte seu pedido.</p></li><li><h3>Chame no WhatsApp</h3><p>Envie o pedido e o endereço de entrega.</p></li><li><h3>Receba em casa</h3><p>Entregamos quentinho em até 40 minutos.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="quotes"><figure><blockquote>“A melhor picanha da cidade. Atendimento sempre atencioso.”</blockquote><figcaption>Mariana S.</figcaption></figure><figure><blockquote>“Pedimos toda sexta. Chega rápido e bem embalado.”</blockquote><figcaption>Carlos e família</figcaption></figure><figure><blockquote>“Fizemos o aniversário da minha mãe aqui e foi perfeito.”</blockquote><figcaption>Juliana R.</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq">
+        <h2>Perguntas frequentes</h2>
+        <details><summary>Vocês fazem entrega?</summary><p>Sim. Entregamos em {{BAIRROS_ATENDIDOS}}. A taxa varia conforme a distância.</p></details><details><summary>Preciso reservar mesa?</summary><p>Para grupos acima de 6 pessoas e nos fins de semana, recomendamos reservar.</p></details><details><summary>Quais formas de pagamento?</summary><p>Pix, cartões de crédito e débito, vale-refeição e dinheiro.</p></details><details><summary>Têm opções sem glúten ou vegetarianas?</summary><p>Sim, temos pratos sinalizados no cardápio. Pergunte à nossa equipe.</p></details>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contato">
+      <div class="container contact">
+        <div>
+          <h2>Reserve sua mesa</h2>
+          <p>Escolha a data e o horário. Confirmamos pelo WhatsApp.</p>
+          <ul class="info">
+          <li><span>WhatsApp</span><a href="#" data-wa>{{WHATSAPP_EXIBICAO}}</a></li>
+          <li><span>E-mail</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li><span>Endereço</span>{{ENDERECO}}</li>
+        </ul>
+        <div class="info-hours"><strong>Horário de funcionamento</strong><table class="hours" id="horarios"></table></div>
+        </div>
+        <form class="form form--card" data-wa-form data-mensagem="Olá! Gostaria de reservar uma mesa." novalidate>
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" type="text" name="nome" data-label="Nome" required></div>
+          <div class="field"><label for="f-data">Data</label><input id="f-data" type="date" name="data" data-label="Data" required></div>
+          <div class="field"><label for="f-horario">Horário</label><input id="f-horario" type="time" name="horario" data-label="Horário" required></div>
+          <div class="field"><label for="f-pessoas">Pessoas</label><select id="f-pessoas" name="pessoas" data-label="Pessoas" required><option value="">Selecione</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 a 10</option><option>Mais de 10</option></select></div>
+          <div class="field field--full"><label for="f-obs">Observações</label><textarea id="f-obs" name="obs" rows="3" data-label="Observações"></textarea></div>
+          <button class="btn btn--primary field--full" type="submit">Solicitar reserva</button>
+          <p class="form__status field--full" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}} · CNPJ {{CNPJ}}</p>
+      <nav aria-label="Redes sociais"><a href="{{LINK_INSTAGRAM}}">Instagram</a><a href="{{LINK_FACEBOOK}}">Facebook</a></nav>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

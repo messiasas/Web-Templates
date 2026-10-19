@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_EMPRESA}} | Transporte e fretamento em {{CIDADE}}</title>
+  <meta name="description" content="Fretamento de vans e ônibus em {{CIDADE}}: viagens, eventos, transporte corporativo e traslados.">
+  <meta property="og:title" content="{{NOME_EMPRESA}}">
+  <meta property="og:description" content="Fretamento de vans e ônibus em {{CIDADE}}: viagens, eventos, transporte corporativo e traslados.">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_EMPRESA}}</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#especial">Frota</a>
+        <a href="#contato" class="btn btn--primary btn--sm">Cotar viagem</a>
+      </nav>
+    </div>
+  </header>
+<main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          
+          <p class="kicker">Fretamento de vans, micro-ônibus e ônibus</p>
+          <h1>Viaje com conforto e segurança, do jeito que o seu grupo precisa</h1>
+          <p class="hero__sub">Fretamento para excursões, eventos, empresas e traslados, com motoristas experientes e veículos revisados.</p>
+          <div class="actions">
+            <a href="#contato" class="btn btn--primary">Cotar viagem</a>
+            <a href="#especial" class="btn btn--ghost">Conhecer a frota</a>
+          </div>
+        </div>
+        <img class="hero__img" src="img/hero.svg" alt="{{DESCRICAO_IMAGEM_PRINCIPAL}}" width="1200" height="900">
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Números"><div class="container stats__grid"><div><strong>20</strong><span>veículos na frota</span></div><div><strong>15</strong><span>anos no mercado</span></div><div><strong>5.000</strong><span>viagens realizadas</span></div><div><strong>24</strong><span>h de suporte</span></div></div></section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <h2>Serviços</h2>
+        <p class="lead">Transporte de passageiros para qualquer ocasião.</p>
+        <div class="cards"><article class="card"><span class="card__icon" aria-hidden="true">🚌</span><h3>Excursões e turismo</h3><p>Viagens para praia, serra, parques e roteiros personalizados.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🎉</span><h3>Eventos</h3><p>Casamentos, formaturas, shows e confraternizações.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🏢</span><h3>Transporte corporativo</h3><p>Rotas fixas para funcionários com pontualidade.</p></article><article class="card"><span class="card__icon" aria-hidden="true">✈️</span><h3>Traslado aeroporto</h3><p>Busca e entrega em aeroportos e rodoviárias.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🎒</span><h3>Transporte escolar</h3><p>Passeios e excursões escolares com monitor.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🧳</span><h3>Transporte executivo</h3><p>Carros e vans executivas para clientes e diretoria.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <img src="img/sobre.svg" alt="{{DESCRICAO_IMAGEM_SOBRE}}" width="900" height="1000" loading="lazy">
+        <div>
+          <h2>Segurança em primeiro lugar</h2>
+          <p>Todos os veículos passam por manutenção preventiva e vistoria antes de cada viagem.</p>
+          <p>Nossos motoristas são habilitados para transporte de passageiros e treinados em direção defensiva.</p>
+          <ul class="checklist"><li>Veículos com ar-condicionado</li><li>Seguro de passageiros</li><li>Licenças em dia</li><li>Motoristas experientes</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section special" id="especial">
+  <div class="container">
+    <h2>Nossa frota</h2>
+    <div class="fleet__finder">
+      <label for="qtd">Quantas pessoas vão viajar?</label>
+      <input id="qtd" type="number" min="1" inputmode="numeric" placeholder="Ex.: 20">
+      <p id="qtd-resultado" role="status" aria-live="polite"></p>
+    </div>
+    <div class="fleet"><article class="fleet__item" data-capacidade="15">
+        <img src="img/foto1.svg" alt="Van executiva" width="900" height="650" loading="lazy">
+        <div class="fleet__body"><h3>Van executiva</h3><p class="fleet__cap">Até 15 passageiros</p><p>Ar-condicionado, poltronas reclináveis e USB</p></div>
+      </article><article class="fleet__item" data-capacidade="28">
+        <img src="img/foto2.svg" alt="Micro-ônibus" width="900" height="650" loading="lazy">
+        <div class="fleet__body"><h3>Micro-ônibus</h3><p class="fleet__cap">Até 28 passageiros</p><p>Ar-condicionado, som ambiente e bagageiro</p></div>
+      </article><article class="fleet__item" data-capacidade="46">
+        <img src="img/foto3.svg" alt="Ônibus rodoviário" width="900" height="650" loading="lazy">
+        <div class="fleet__body"><h3>Ônibus rodoviário</h3><p class="fleet__cap">Até 46 passageiros</p><p>Banheiro, poltronas leito e Wi-Fi</p></div>
+      </article></div>
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Como contratar</h2>
+        <ol class="steps"><li><h3>Cotação</h3><p>Informe destino, data e número de pessoas.</p></li><li><h3>Proposta</h3><p>Enviamos valor e veículo indicado.</p></li><li><h3>Confirmação</h3><p>Reserva garantida com sinal.</p></li><li><h3>Boa viagem</h3><p>Motorista no local e horário combinados.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="quotes"><figure><blockquote>“Levaram nossa turma para a formatura sem nenhum atraso.”</blockquote><figcaption>Comissão de formatura</figcaption></figure><figure><blockquote>“Van impecável e motorista muito educado.”</blockquote><figcaption>Luciana P.</figcaption></figure><figure><blockquote>“Usamos para o transporte da equipe há 3 anos.”</blockquote><figcaption>RH, empresa de tecnologia</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq">
+        <h2>Perguntas frequentes</h2>
+        <details><summary>Com quanto tempo devo reservar?</summary><p>Recomendamos pelo menos 15 dias de antecedência, e mais na alta temporada.</p></details><details><summary>O valor inclui pedágio e motorista?</summary><p>A proposta detalha o que está incluso: motorista, combustível, pedágios e estadia.</p></details><details><summary>Fazem viagens interestaduais?</summary><p>Sim, com as licenças exigidas pela ANTT.</p></details><details><summary>Qual a capacidade dos veículos?</summary><p>De 15 a 46 passageiros, conforme o veículo.</p></details>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contato">
+      <div class="container contact">
+        <div>
+          <h2>Cote sua viagem</h2>
+          <p>Preencha os dados e enviamos a proposta pelo WhatsApp.</p>
+          <ul class="info">
+          <li><span>WhatsApp</span><a href="#" data-wa>{{WHATSAPP_EXIBICAO}}</a></li>
+          <li><span>E-mail</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li><span>Endereço</span>{{ENDERECO}}</li>
+        </ul>
+        
+        </div>
+        <form class="form form--card" data-wa-form data-mensagem="Olá! Gostaria de uma cotação de fretamento." novalidate>
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" type="text" name="nome" data-label="Nome" required></div>
+          <div class="field"><label for="f-origem">Origem</label><input id="f-origem" type="text" name="origem" data-label="Origem" required></div>
+          <div class="field"><label for="f-destino">Destino</label><input id="f-destino" type="text" name="destino" data-label="Destino" required></div>
+          <div class="field"><label for="f-ida">Data de ida</label><input id="f-ida" type="date" name="ida" data-label="Data de ida" required></div>
+          <div class="field"><label for="f-volta">Data de volta</label><input id="f-volta" type="date" name="volta" data-label="Data de volta"></div>
+          <div class="field"><label for="f-passageiros">Passageiros</label><input id="f-passageiros" type="number" name="passageiros" data-label="Passageiros" inputmode="numeric" min="0" required></div>
+          <button class="btn btn--primary field--full" type="submit">Solicitar cotação</button>
+          <p class="form__status field--full" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}} · CNPJ {{CNPJ}}</p>
+      <nav aria-label="Redes sociais"><a href="{{LINK_INSTAGRAM}}">Instagram</a><a href="{{LINK_FACEBOOK}}">Facebook</a></nav>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>

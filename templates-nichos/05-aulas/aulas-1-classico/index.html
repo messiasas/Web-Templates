@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{NOME_EMPRESA}} | Aulas e cursos em {{CIDADE}}</title>
+  <meta name="description" content="Aulas de reforço, idiomas e preparatório em {{CIDADE}}, presenciais e online. Agende uma aula experimental.">
+  <meta property="og:title" content="{{NOME_EMPRESA}}">
+  <meta property="og:description" content="Aulas de reforço, idiomas e preparatório em {{CIDADE}}, presenciais e online. Agende uma aula experimental.">
+  <meta property="og:image" content="img/hero.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a href="#" class="logo">{{NOME_EMPRESA}}</a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <a href="#servicos">Cursos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#especial">Planos</a>
+        <a href="#contato" class="btn btn--primary btn--sm">Agendar aula experimental</a>
+      </nav>
+    </div>
+  </header>
+<main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          
+          <p class="kicker">Aulas presenciais e online</p>
+          <h1>Aprender fica mais fácil com acompanhamento de perto</h1>
+          <p class="hero__sub">Turmas pequenas e aulas particulares com professores que explicam até fazer sentido.</p>
+          <div class="actions">
+            <a href="#contato" class="btn btn--primary">Agendar aula experimental</a>
+            <a href="#especial" class="btn btn--ghost">Ver planos</a>
+          </div>
+        </div>
+        <img class="hero__img" src="img/hero.svg" alt="{{DESCRICAO_IMAGEM_PRINCIPAL}}" width="1200" height="900">
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Números"><div class="container stats__grid"><div><strong>1.200</strong><span>alunos atendidos</span></div><div><strong>95</strong><span>% de aprovação</span></div><div><strong>8</strong><span>alunos por turma, no máximo</span></div><div><strong>10</strong><span>anos ensinando</span></div></div></section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <h2>Cursos</h2>
+        <p class="lead">Do reforço escolar ao preparatório, para todas as idades.</p>
+        <div class="cards"><article class="card"><span class="card__icon" aria-hidden="true">📚</span><h3>Reforço escolar</h3><p>Ensino fundamental e médio, em todas as matérias.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🎯</span><h3>Preparatório ENEM</h3><p>Conteúdo, simulados e correção de redação.</p></article><article class="card"><span class="card__icon" aria-hidden="true">🌎</span><h3>Inglês</h3><p>Conversação e gramática, do básico ao avançado.</p></article><article class="card"><span class="card__icon" aria-hidden="true">✍️</span><h3>Redação</h3><p>Técnicas de escrita com correção individual.</p></article><article class="card"><span class="card__icon" aria-hidden="true">➗</span><h3>Matemática</h3><p>Aulas focadas nas dificuldades de cada aluno.</p></article><article class="card"><span class="card__icon" aria-hidden="true">💻</span><h3>Informática</h3><p>Pacote Office, internet e digitação.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <img src="img/sobre.svg" alt="{{DESCRICAO_IMAGEM_SOBRE}}" width="900" height="1000" loading="lazy">
+        <div>
+          <h2>Cada aluno aprende de um jeito</h2>
+          <p>Começamos com uma avaliação para entender o nível e as dificuldades de cada aluno.</p>
+          <p>A partir daí, montamos um plano de estudos e mantemos a família informada sobre a evolução.</p>
+          <ul class="checklist"><li>Aula experimental gratuita</li><li>Material incluso</li><li>Relatório mensal para a família</li><li>Horários flexíveis</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section special" id="especial">
+  <div class="container">
+    <h2>Planos</h2>
+    <p class="lead">Valores de exemplo. No plano semestral, a mensalidade fica menor.</p>
+    <div class="billing" role="group" aria-label="Forma de pagamento">
+      <button class="is-active" data-billing="mensal" aria-pressed="true">Mensal</button>
+      <button data-billing="semestral" aria-pressed="false">Semestral</button>
+    </div>
+    <div class="plans"><article class="plan">
+        
+        <h3>Essencial</h3>
+        <p class="plan__price">R$ <strong data-mensal="190" data-semestral="170">190</strong><span>/mês</span></p>
+        <ul><li>1 aula por semana</li><li>Material digital</li><li>Relatório mensal</li></ul>
+        <a class="btn btn--ghost" href="#contato">Quero este plano</a>
+      </article><article class="plan plan--featured">
+        <p class="plan__tag">Mais escolhido</p>
+        <h3>Intensivo</h3>
+        <p class="plan__price">R$ <strong data-mensal="340" data-semestral="300">340</strong><span>/mês</span></p>
+        <ul><li>2 aulas por semana</li><li>Material impresso</li><li>Simulados mensais</li><li>Relatório mensal</li></ul>
+        <a class="btn btn--primary" href="#contato">Quero este plano</a>
+      </article><article class="plan">
+        
+        <h3>Particular</h3>
+        <p class="plan__price">R$ <strong data-mensal="480" data-semestral="430">480</strong><span>/mês</span></p>
+        <ul><li>Aulas individuais</li><li>Horário flexível</li><li>Plano de estudos personalizado</li></ul>
+        <a class="btn btn--ghost" href="#contato">Quero este plano</a>
+      </article></div>
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Como começar</h2>
+        <ol class="steps"><li><h3>Aula experimental</h3><p>Conheça a metodologia sem custo.</p></li><li><h3>Avaliação</h3><p>Identificamos o nível e os objetivos.</p></li><li><h3>Plano de estudos</h3><p>Definimos turma, horários e metas.</p></li><li><h3>Acompanhamento</h3><p>Relatórios mensais da evolução.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <div class="quotes"><figure><blockquote>“Minha filha passou de nota vermelha para azul em um bimestre.”</blockquote><figcaption>Fernanda, mãe da Laura</figcaption></figure><figure><blockquote>“Os simulados me deixaram muito mais seguro no ENEM.”</blockquote><figcaption>Gabriel, aprovado em Engenharia</figcaption></figure><figure><blockquote>“Aulas de inglês leves e práticas. Já consigo conversar.”</blockquote><figcaption>Roberto A.</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container faq">
+        <h2>Perguntas frequentes</h2>
+        <details><summary>A aula experimental é mesmo gratuita?</summary><p>Sim, sem compromisso de matrícula.</p></details><details><summary>Têm aulas online?</summary><p>Sim, ao vivo, com o mesmo professor e material das presenciais.</p></details><details><summary>Posso trocar de horário?</summary><p>Sim, conforme a disponibilidade das turmas.</p></details><details><summary>Há multa para cancelar?</summary><p>Os planos mensais podem ser cancelados com 30 dias de aviso.</p></details>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="contato">
+      <div class="container contact">
+        <div>
+          <h2>Agende uma aula experimental</h2>
+          <p>Sem custo e sem compromisso. Confirmamos o horário pelo WhatsApp.</p>
+          <ul class="info">
+          <li><span>WhatsApp</span><a href="#" data-wa>{{WHATSAPP_EXIBICAO}}</a></li>
+          <li><span>E-mail</span><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li><span>Endereço</span>{{ENDERECO}}</li>
+        </ul>
+        
+        </div>
+        <form class="form form--card" data-wa-form data-mensagem="Olá! Gostaria de agendar uma aula experimental." novalidate>
+          <div class="field"><label for="f-aluno">Nome do aluno</label><input id="f-aluno" type="text" name="aluno" data-label="Nome do aluno" required></div>
+          <div class="field"><label for="f-serie">Idade ou série</label><input id="f-serie" type="text" name="serie" data-label="Idade ou série" required></div>
+          <div class="field"><label for="f-curso">Curso</label><select id="f-curso" name="curso" data-label="Curso" required><option value="">Selecione</option><option>Reforço escolar</option><option>Preparatório ENEM</option><option>Inglês</option><option>Redação</option><option>Matemática</option><option>Informática</option></select></div>
+          <div class="field"><label for="f-modalidade">Modalidade</label><select id="f-modalidade" name="modalidade" data-label="Modalidade" required><option value="">Selecione</option><option>Presencial</option><option>Online</option></select></div>
+          <div class="field"><label for="f-periodo">Melhor período</label><select id="f-periodo" name="periodo" data-label="Melhor período"><option value="">Selecione</option><option>Manhã</option><option>Tarde</option><option>Noite</option></select></div>
+          <button class="btn btn--primary field--full" type="submit">Agendar aula</button>
+          <p class="form__status field--full" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="ano"></span> {{NOME_EMPRESA}} · CNPJ {{CNPJ}}</p>
+      <nav aria-label="Redes sociais"><a href="{{LINK_INSTAGRAM}}">Instagram</a><a href="{{LINK_FACEBOOK}}">Facebook</a></nav>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="#" data-wa aria-label="Falar pelo WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+  <script src="script.js"></script>
+</body>
+</html>
